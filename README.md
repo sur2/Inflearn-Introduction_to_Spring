@@ -23,3 +23,20 @@
 - @ResponseBody가 달린 컨트롤러의 메서드는 정적, 동적 웹 페이지가 아닌 객체(.json)를 반환한다.
   - ViewResolver에 가지 않는다.
   - HttpMessageConverter의 Defualt는 json이지만 xml로 반환 할 수 있다.
+
+
+
+- Optional<T>
+  - `` return Optional.ofNullable(Object);`` 객체가 Null이면 Null을 반환, 그렇지 않으면 객체를 반환
+
+
+
+- AtomicLong, ConCurrentHashMap
+
+
+
+- JUnit @Test
+  - ``Assertions.assertThat(object01).isEqualTo(object02)``: object01과 object02를 hashcode를 비교한다.
+  - 테스트는 실행은 코드 순서를 보장 받지 못 한다. 즉, 테스트 메서드가 끝나면 데이터를 Clear 해주어야 한다.
+    - 테스트는 서로 순서, 의존관계 없이 설계되어야 한다.
+  - @AfterEach는 @Test 실행이 단위마다 끝날 때 마다 실행된다.
