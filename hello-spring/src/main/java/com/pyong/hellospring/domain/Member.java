@@ -1,4 +1,4 @@
-package com.pyong.hellospring.controller.domain;
+package com.pyong.hellospring.domain;
 
 public class Member {
 

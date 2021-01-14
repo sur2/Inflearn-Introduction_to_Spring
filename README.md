@@ -40,3 +40,18 @@
   - 테스트는 실행은 코드 순서를 보장 받지 못 한다. 즉, 테스트 메서드가 끝나면 데이터를 Clear 해주어야 한다.
     - 테스트는 서로 순서, 의존관계 없이 설계되어야 한다.
   - @AfterEach는 @Test 실행이 단위마다 끝날 때 마다 실행된다.
+    - 반대로 @Test 실행 전에 작업을 실행 할 수 있는 @BeforeEach 또한 존재한다.
+  - 원하는 클래스를 테스트 할 때는  Class를 선언한 곳에서 Create Test를 하면 된다.(Windows 기준 ``Ctrl`` + ``Shift`` + ``T``)
+  - 테스트 메서드는 한글로 적어도 무방하다.
+  - 테스트 기법: givne, when, then 패턴
+    - given: 무언가 주어졌을 때
+    - when: 이 것을 실행 했을 때
+    - then: 결과로 나와야 할 것
+
+
+
+## 알아야 할 것
+
+- JUnit Test
+  - (org.junit.jupiter.api.Assertions) Assertions.assertThat 
+  - (org.assertj.core.api.Assertions) Assertions.assertThrow
