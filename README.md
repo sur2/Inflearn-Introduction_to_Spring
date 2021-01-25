@@ -64,6 +64,16 @@
 
 
 
+- JDBC
+  1. DataSource
+     1. Connection (DB 연결)
+     2. PreparedStatement (Qurey)
+     3. ResultSet (결과반환)
+
+
+
+
+
 ## 스프링 빈을 등록하는 2가지 방법
 
 ### 1. 컴포넌트 스캔과 자동 의존관계 설정
