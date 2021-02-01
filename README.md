@@ -28,6 +28,7 @@
 
 - Optional<T>
   - `` return Optional.ofNullable(Object);`` 객체가 Null이면 Null을 반환, 그렇지 않으면 객체를 반환
+  - `.stream().findAny();`
 
 
 
@@ -90,6 +91,13 @@
 
 
 
+- 스프링 JdbcTemplate
+  - Jdbc API의 반복적인 부분을 제거할 수 있다. 
+
+
+
+
+
 ## 객체지향 설계 원칙 SOLID
 
 ### SOLID - SRP
@@ -126,6 +134,8 @@
 
 
 ### 의존성 주입(Dependency Injection)에는 필드 주입, setter 주입, 생성자 주입이 있다.
+
+- `@Autowired`를 사용하여 의존성을 주입할 수 있다.(생성자 주입일 경우 생성자가 하나이면 `@Autowired`생략 가능)
 
 #### 의존관계가 실행중에 동적으로  변경하는 경우는 거의 없으므로 생성자 주입을 권장한다.
 
