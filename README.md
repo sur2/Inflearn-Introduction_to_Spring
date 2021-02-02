@@ -112,10 +112,6 @@
 
 
 
-
-
-
-
 ## 스프링 빈을 등록하는 2가지 방법
 
 ### 1. 컴포넌트 스캔과 자동 의존관계 설정
@@ -148,3 +144,15 @@
 - JUnit Test
   - (org.junit.jupiter.api.Assertions) Assertions.assertThat 
   - (org.assertj.core.api.Assertions) Assertions.assertThrow
+
+
+
+
+
+## JPA
+
+객체 중심의 설계, ORM이다.(ORM: Object Relational Mapping)
+
+JPA는 인터페이스 성향을 띄며 그 구현체로 Hibernate가 있다.
+
+데이터를 저장, 변경 시 Transaction이 필수이기 때문에 Service 계층에서 `@Transactional`을 잊지 말자!
