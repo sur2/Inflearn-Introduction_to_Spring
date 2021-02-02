@@ -23,7 +23,7 @@ class MemberServiceIntegrationTest {
     @Autowired
     MemberRepository memoryMemberRepository;
 
-    @Test @Commit
+    @Test
     void 회원가입() {
         //given
         Member member = new Member();
