@@ -177,3 +177,16 @@ JpaRepository에서 공통적인 메서드를 제공한다.(`save(), findById(Lo
 
 JPA는 네이티브 쿼리를 작성 할 수 있도록 남겨두었기 때문에 SQL를 작성하여도 무방하다.
 
+
+
+## AOP
+
+**핵심 로직 상황(core concern)**과 **공통 로직 상황(cross-cutting concern)**을 분리하자!
+
+ex) 각 서비스 메서드가 작성완료된 상태에서 각 각의 메서드의 실행 시간을 구하는 코드를 추가해야 된다면?
+➡ 서비스 메서드를 전부 수정하지 않고, AOP를 활용하여 해결 할 수 있다.
+
+AOP Class에 `@Aspect` 할 것! ➡ 작성 후 스프링 빈에 등록 ➡ `@Around`로 타겟 지정
+
+- `@Configuration`에서 `@Bean`을 직접 등록 할 때는 자기 자신을 `@Around` 타겟으로 지정하기 때문에 스프링 빈의 순환참조 문제가 발생 할 수 있다. ➡ 타겟에서 제외하는 `!target(com.pyong.hellospring.SpringConfig)`를 `@Around`에 추가하여 순환 참조 문제를 해결한다.
+
