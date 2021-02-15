@@ -3,6 +3,10 @@
 
 
 
+## 스프링을 왜 쓰는가?
+
+
+
 ## 알아가는 것
 
 - 컨트롤러에서 리턴 값으로 문자를 반환하면 뷰 리졸버(viewResolver)가 화면을 찾아서 처리한다.
@@ -189,4 +193,9 @@ ex) 각 서비스 메서드가 작성완료된 상태에서 각 각의 메서드
 AOP Class에 `@Aspect` 할 것! ➡ 작성 후 스프링 빈에 등록 ➡ `@Around`로 타겟 지정
 
 - `@Configuration`에서 `@Bean`을 직접 등록 할 때는 자기 자신을 `@Around` 타겟으로 지정하기 때문에 스프링 빈의 순환참조 문제가 발생 할 수 있다. ➡ 타겟에서 제외하는 `!target(com.pyong.hellospring.SpringConfig)`를 `@Around`에 추가하여 순환 참조 문제를 해결한다.
+
+#### 어떻게 AOP가 적용될 수 있을까?
+
+- MVC 패턴 기준 Controller와 Service 사이에 가짜 Service가 되는 프록시가 `joinPoint.proceed()`를 호출
+  Cglib 프록시가 주입 `EnhancerBySpringCGLIB`
 
